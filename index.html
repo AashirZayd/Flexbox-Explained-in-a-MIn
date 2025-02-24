@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Explained</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            height: 300px;
+            border: 2px solid black;
+            padding: 10px;
+        }
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            font-weight: bold;
+            border: 1px solid blue;
+        }
+        .example-container {
+            margin-top: 20px;
+            border: 2px dashed gray;
+            padding: 10px;
+        }
+        .example {
+            display: flex;
+            border: 1px solid black;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .example div {
+            width: 50px;
+            height: 50px;
+            background-color: lightcoral;
+            margin: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Flexbox Demonstration By Aashir Zayd</h1>
+    <p>The container below uses <code>display: flex</code> with different properties.</p>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+    
+    <h2>Flex Properties Explained</h2>
+    <ul>
+        <li><strong>display: flex;</strong> - Enables flexbox on the container.</li>
+        <li><strong>flex-direction:</strong> Defines the direction of items (row, column, row-reverse, column-reverse).</li>
+        <li><strong>justify-content:</strong> Aligns items along the main axis (flex-start, flex-end, center, space-between, space-around, space-evenly).</li>
+        <li><strong>align-items:</strong> Aligns items along the cross axis (flex-start, flex-end, center, stretch, baseline).</li>
+        <li><strong>flex-wrap:</strong> Controls item wrapping (nowrap, wrap, wrap-reverse).</li>
+        <li><strong>align-content:</strong> Aligns flex lines when wrapping (flex-start, flex-end, center, space-between, space-around, space-evenly, stretch).</li>
+    </ul>
+    
+    <h2>Flexbox Examples</h2>
+    <div class="example-container">
+        <h3>Example 1: Justify Content - Space Between</h3>
+        <p>Distributes items evenly with the first item at the start and the last item at the end.</p>
+        <div class="example" style="justify-content: space-between;">
+            <div>A</div>
+            <div>B</div>
+            <div>C</div>
+        </div>
+        
+        <h3>Example 2: Align Items - Flex End</h3>
+        <p>Aligns items to the bottom of the container.</p>
+        <div class="example" style="align-items: flex-end; height: 100px;">
+            <div>D</div>
+            <div>E</div>
+            <div>F</div>
+        </div>
+        
+        <h3>Example 3: Column Direction</h3>
+        <p>Stacks items vertically instead of horizontally.</p>
+        <div class="example" style="flex-direction: column; height: 150px;">
+            <div>G</div>
+            <div>H</div>
+            <div>I</div>
+        </div>
+        
+        <h3>Example 4: Justify Content - Center</h3>
+        <p>Centers items along the main axis.</p>
+        <div class="example" style="justify-content: center;">
+            <div>J</div>
+            <div>K</div>
+            <div>L</div>
+        </div>
+        
+        <h3>Example 5: Justify Content - Space Evenly</h3>
+        <p>Distributes items with equal spacing between, before, and after them.</p>
+        <div class="example" style="justify-content: space-evenly;">
+            <div>M</div>
+            <div>N</div>
+            <div>O</div>
+        </div>
+        
+        <h3>Example 6: Align Content - Space Around</h3>
+        <p>Spaces wrapped items evenly along the cross-axis.</p>
+        <div class="example" style="flex-wrap: wrap; align-content: space-around; height: 150px;">
+            <div>P</div>
+            <div>Q</div>
+            <div>R</div>
+            <div>S</div>
+        </div>
+        
+        <h3>Example 7: Row Reverse</h3>
+        <p>Reverses the order of items in a row.</p>
+        <div class="example" style="flex-direction: row-reverse;">
+            <div>T</div>
+            <div>U</div>
+            <div>V</div>
+        </div>
+        
+        <h3>Example 8: Column Reverse</h3>
+        <p>Reverses the order of items in a column.</p>
+        <div class="example" style="flex-direction: column-reverse; height: 150px;">
+            <div>W</div>
+            <div>X</div>
+            <div>Y</div>
+        </div>
+    </div>
+    
+    <footer style="margin-top: 20px; text-align: center; font-weight: bold;">
+        Demonstrated by Aashir Zayd
+    </footer>
+</body>
+</html>
